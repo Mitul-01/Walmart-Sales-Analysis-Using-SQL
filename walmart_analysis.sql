@@ -27,8 +27,8 @@ set time_of_day = (
 
 -- day_name----
 select
-    date,
-    dayname(date) as day_name 
+date,
+dayname(date) as day_name 
 from data;
 
 alter table data add column day_name varchar(10);
@@ -42,8 +42,8 @@ set day_name = dayname(date);
 
 --    month name  -- 
 select 
-	date, 
-	monthname(date) as mth_name
+date, 
+monthname(date) as mth_name
 from data;
 
 ALter table data add column mth_name varchar(10);
@@ -140,10 +140,7 @@ Select distinct payment from data;
 select * from data;
 
 #18. which customer type buys the most
-select
-     customer_type,
-     count(*) as cstm_cnt
-from data
+select Customer_type,count(*) as cstm_cnt from data
 group by customer_type; 
 
 #19. what is the gender of most of the customers
